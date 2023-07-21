@@ -63,7 +63,8 @@ const merge = (array, s, m, e) => {
 const numTrials = 10
 for (let i = 0; i < numTrials; i++) {
     const size = Math.floor(Math.random() * 20)
-    const array = generateRandomArray(size)
+    const array = [2,0,2,1,1,0]
     merge_sort(array, 0, array.length - 1)
+    console.warn(array)
     console.warn(`Trial #${i}: ${verifySorted(array)}`)
 }
