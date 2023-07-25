@@ -50,7 +50,7 @@ class Heap {
         this.sift_up(this.heap.length - 1);
     }
 
-    heapify(arr) {
+    buildMaxHeap(arr) {
         this.heap = arr;
         this.size = arr.length;
         for (let i = 0; i < Math.floor(arr.length / 2); i++) {
@@ -58,10 +58,11 @@ class Heap {
         }
     }
 
-    printHeap() {
-        //How wide is our arr?
-        const width = Math.floor(Math.log2(this.arr.length))
-    }
+    //TODO
+    // printHeap() {
+    //     //How wide is our arr?
+    //     const width = Math.floor(Math.log2(this.arr.length))
+    // }
 }
 
 const heap = new Heap();
