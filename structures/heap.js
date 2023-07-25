@@ -50,7 +50,7 @@ class Heap {
         this.sift_up(this.heap.length - 1);
     }
 
-    buildMaxHeap(arr) {
+    build_max_heap(arr) {
         this.heap = arr;
         this.size = arr.length;
         for (let i = 0; i < Math.floor(arr.length / 2); i++) {
@@ -86,7 +86,7 @@ console.log(heap.heap);
 
 // Test Case 3: Heapify an array and verify max-heap property
 const arr = [6, 4, 8, 9, 2, 3, 1, 7];
-heap.heapify(arr);
+heap.build_max_heap(arr);
 
 // The heap should be [9, 7, 8, 6, 2, 3, 1, 4]
 console.log(heap.heap);
