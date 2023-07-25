@@ -22,7 +22,7 @@ class Heap {
         if (l_child < this.size && this.heap[l_child] > this.heap[i]) {
             largest = l_child;
         }
-        else if (r_child < this.size && this.heap[r_child] > this.heap[i]) {
+        if (r_child < this.size && this.heap[r_child] > this.heap[largest]) {
             largest = r_child
         }
         if (largest != i) {
