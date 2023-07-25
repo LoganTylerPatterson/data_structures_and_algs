@@ -53,7 +53,7 @@ class Heap {
     build_max_heap(arr) {
         this.heap = arr;
         this.size = arr.length;
-        for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+        for (let i = Math.floor(arr.length / 2); i > -1; i--) {
             this.sift_down(i);
         }
     }
