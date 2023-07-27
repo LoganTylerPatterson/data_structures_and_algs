@@ -5,7 +5,7 @@ class Heap {
     }
 
     get_parent(i) {
-        return Math.floor(i / 2);
+        return Math.floor((i-1) / 2);
     }
 
     get_left_child(i) {
@@ -55,6 +55,38 @@ class Heap {
         this.size = arr.length;
         for (let i = Math.floor(arr.length / 2); i > -1; i--) {
             this.sift_down(i);
+        }
+    }
+
+    build_max_heap() {
+        //increase our size
+        this.size = this.heap.length
+        //siftdown all parents
+        for (let i = Math.floor(arr.length / 2); i > -1; i--) {
+            this.sift_down(i);
+        }
+    }
+
+    popMax() {
+        //Swap first and last
+        const tmp = this.heap[0]
+        this.heap[0] = this.heap[this.size - 1]
+        this.heap[this.size-1] = tmp
+        //Decrease size
+        this.size -= 1
+        //Sift the root down
+        this.sift_down(0)
+    }
+
+    peekMax() {
+        return this.heap[0]
+    }
+
+    heapsort() {
+        let i = this.size
+        while (i > 0) {
+            this.popMax()
+            i--
         }
     }
 
