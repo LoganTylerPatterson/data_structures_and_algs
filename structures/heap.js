@@ -106,28 +106,24 @@ heap.insert(5);
 heap.insert(30);
 heap.insert(15);
 
-// The heap should be [30, 20, 15, 10, 5]
 console.log(heap.heap);
 
 // Test Case 2: Insert more elements
 heap.insert(25);
 heap.insert(12);
 
-// The heap should be [30, 25, 20, 12, 5, 15, 10]
 console.log(heap.heap);
 
 // Test Case 3: Heapify an array and verify max-heap property
 const arr = [6, 4, 8, 9, 2, 3, 1, 7];
 heap.build_max_heap(arr);
 
-// The heap should be [9, 7, 8, 6, 2, 3, 1, 4]
 console.log(heap.heap);
 
 // Test Case 4: Insert more elements
 heap.insert(11);
 heap.insert(13);
 
-// The heap should be [13, 11, 9, 7, 2, 3, 1, 4, 8, 6]
 console.log(heap.heap);
 
 // Test Case 5: Insert element with negative value
